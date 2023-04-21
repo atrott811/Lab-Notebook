@@ -13,3 +13,8 @@ we did some changes with the groups main repositories for group leader to merge
 4/21
 created trimmed_fast.q directory
 activate conda environment
+git add <-- would add to file if permission wasn't denied
+git commit -m
+
+cp /tmp/gen711_project_data/fastp.sh ~/
+chmod +x ~/fastp.sh
