@@ -19,3 +19,23 @@ git commit -m
 cp /tmp/gen711_project_data/fastp-single.sh ~/fastp-single.sh
 chmod +x ~/fastp-single.sh
 ./fastp-single.sh 150 /tmp/gen711_project_data/FMT/fastqs  trimmed_fast.q/
+conda activate qiime2-2022.8
+
+qiime tools import \
+   --type "SampleData[PairedEndSequencesWithQuality]"  \
+   --input-format CasavaOneEightSingleLanePerSampleDirFmt \
+   --input-path /home/users/apt1019/trimmed_fast.q \
+   --output-path /home/users/apt1019/trimmed_fast.q/trimmed_fastq.qiimed\
+
+   qiime cutadapt trim-paired \
+    --i-demultiplexed-sequences /home/users/apt1019/trimmed_fast.q/trimmed_fastq.qiimed \
+    --p-cores 4 \
+    --p-front-f TACGTATGGTGCA \
+    --p-discard-untrimmed \
+    --p-match-adapter-wildcards \
+    --verbose \
+    --o-trimmed-sequences /home/users/apt1019/trimmed_fast.q/trimmed_fastq.qza
+
+    qiime demux summarize \
+--i-data /home/users/apt1019/trimmed_fast.q//trimmed_fastq.qza \
+--o-visualization  /home/users/apt1019/trimmed_fast.q/trimmed_fastq.qzv 
