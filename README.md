@@ -9,3 +9,7 @@ github.com/jthmiller/gen711-811-example
 fork the repositories (jthmiller and group repositories)
 
 we did some changes with the groups main repositories for group leader to merge
+
+4/21
+created trimmed_fast.q directory
+activate conda environment
