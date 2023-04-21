@@ -16,5 +16,6 @@ activate conda environment
 git add <-- would add to file if permission wasn't denied
 git commit -m
 
-cp /tmp/gen711_project_data/fastp.sh ~/
-chmod +x ~/fastp.sh
+cp /tmp/gen711_project_data/fastp-single.sh ~/fastp-single.sh
+chmod +x ~/fastp-single.sh
+./fastp-single.sh 150 /tmp/gen711_project_data/FMT/fastqs  trimmed_fast.q/
