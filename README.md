@@ -39,3 +39,14 @@ qiime tools import \
     qiime demux summarize \
 --i-data /home/users/apt1019/trimmed_fast.q//trimmed_fastq.qza \
 --o-visualization  /home/users/apt1019/trimmed_fast.q/trimmed_fastq.qzv 
+
+4/28
+
+./fastp-single.sh 120 /tmp/gen711_project_data/FMT_3/fmt-tutorial-demux-2 trimmed_fastq2
+./fastp-single.sh 120 /tmp/gen711_project_data/FMT_3/fmt-tutorial-demux-1 trimmed_fastq1
+
+conda activate qiime2-2022.8
+
+qiime tools import --type "SampleData[SequencesWithQuality]" --input-format CasavaOneEightSingleLanePerSampleDirFmt --input-path trimmed_fastq1 --output-path qiime1
+
+qiime tools import --type "SampleData[SequencesWithQuality]" --input-format CasavaOneEightSingleLanePerSampleDirFmt --input-path trimmed_fastq2 --output-path qiime2
