@@ -50,3 +50,6 @@ conda activate qiime2-2022.8
 qiime tools import --type "SampleData[SequencesWithQuality]" --input-format CasavaOneEightSingleLanePerSampleDirFmt --input-path trimmed_fastq1 --output-path qiime1
 
 qiime tools import --type "SampleData[SequencesWithQuality]" --input-format CasavaOneEightSingleLanePerSampleDirFmt --input-path trimmed_fastq2 --output-path qiime2
+
+qiime cutadapt trim-single --i-demultiplexed-sequences qiime1.qza --p-front TACGTATGGTGCA --p-discard-untrimmed --p-match-adapter-wildcards --verbose --o-trimmed-sequences cutadapt1
+qiime cutadapt trim-single --i-demultiplexed-sequences qiime2.qza --p-front TACGTATGGTGCA --p-discard-untrimmed --p-match-adapter-wildcards --verbose --o-trimmed-sequences cutadapt2
