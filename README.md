@@ -76,3 +76,5 @@ qiime feature-classifier classify-sklearn --i-classifier /tmp/gen711_project_dat
 qiime taxa barplot --i-table /home/users/apt1019/AMA-Fecal-Transplant/feature_table.qza --i-taxonomy /home/users/apt1019/AMA-Fecal-Transplant/FMT-taxonomy.qza --o-visualization /home/users/apt1019/AMA-Fecal-Transplant/barplot-1.qzv
 
 qiime taxa barplot --i-table /home/users/apt1019/AMA-Fecal-Transplant/feature_table2.qza --i-taxonomy /home/users/apt1019/AMA-Fecal-Transplant/FMT-taxonomy.qza --o-visualization /home/users/apt1019/AMA-Fecal-Transplant/barplot-2.qzv
+
+qiime taxa barplot --i-table feature_table.qza --m-metadata-file sample-metadata.tsv --i-taxonomy taxonomy.qza --o-visualization my-barplot.qzv
