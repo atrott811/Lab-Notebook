@@ -78,3 +78,5 @@ qiime taxa barplot --i-table /home/users/apt1019/AMA-Fecal-Transplant/feature_ta
 qiime taxa barplot --i-table /home/users/apt1019/AMA-Fecal-Transplant/feature_table2.qza --i-taxonomy /home/users/apt1019/AMA-Fecal-Transplant/FMT-taxonomy.qza --o-visualization /home/users/apt1019/AMA-Fecal-Transplant/barplot-2.qzv
 
 qiime taxa barplot --i-table feature_table.qza --m-metadata-file sample-metadata.tsv --i-taxonomy FMT-taxonomy.qza --o-visualization my-barplot.qzv
+
+qiime feature-table filter-samples --i-table feature_table.qza --m-metadata-file sample-metadata.tsv --o-filtered-table new_samples_table.qza
