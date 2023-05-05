@@ -67,6 +67,8 @@ qiime metadata tabulate --m-input-file denoising-stats2.qza --o-visualization de
 qiime feature-table tabulate-seqs --i-data rep-seqs.qza --o-visualization rep-seqs.qzv
 qiime feature-table tabulate-seqs --i-data rep-seqs2.qza --o-visualization rep-seqs2.qzv
 
+5/5
+
 qiime feature-table merge-seqs --i-data /home/users/apt1019/AMA-Fecal-Transplant/rep-seqs.qza --i-data /home/users/apt1019/AMA-Fecal-Transplant/rep-seqs2.qza --o-merged-data /home/users/apt1019/AMA-Fecal-Transplant/merged.rep-seqs.qza
 
 qiime feature-classifier classify-sklearn --i-classifier /tmp/gen711_project_data/reference_databases/classifier.qza --i-reads /home/users/apt1019/AMA-Fecal-Transplant/merged.rep-seqs.qza --o-classification /home/users/apt1019/AMA-Fecal-Transplant/FMT-taxonomy.qza
